@@ -2,6 +2,8 @@
 
 An Azure Data Factory (ADF) pipeline that automatically moves files from one Blob Storage container to another the moment they are uploaded. No manual runs, no schedules. A **Storage Event Trigger** starts the pipeline whenever a new blob lands in the source container.
 
+![Pipeline design](Pipeline%20Design.png)
+
 ## What it does
 
 Upload a file to `triggersource` and, within a minute or so:
@@ -87,3 +89,20 @@ Blob uploaded to triggersource
 ## Result
 
 In the Monitor tab, a successful run shows all activities as `Succeeded`: one `Get Metadata`, one `ForEach`, and a `Copy Data` plus `DeleteCopiedFile` pair for every file that was in the source container.
+
+## Screenshots
+
+### ForEach items expression
+![ForEach items expression](Screenshot1%20ForEach%20Items%20Expression.png)
+
+### Source dataset parameter
+![Source dataset parameter](Screenshot2%20Source%20Dataset%20Parameter.png)
+
+### Copy activity parameter mapping
+![Copy activity parameter mapping](Screenshot3%20Copy%20Activity%20Parameter%20Mapping.png)
+
+### Successful pipeline run
+![Successful pipeline run](Successful%20Pipeline%20Run.png)
+
+### Successful trigger run
+![Successful trigger run](Successful%20Trigger%20Run.png)
