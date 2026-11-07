@@ -1,6 +1,6 @@
 # Azure Data Factory: Event-Driven File Ingestion
 
-An Azure Data Factory (ADF) pipeline that automatically moves files from one Blob Storage container to another the moment they are uploaded. No manual runs, no schedules. A **Storage Event Trigger** starts the pipeline whenever a new blob lands in the source container.
+An Azure Data Factory (ADF) pipeline that automatically moves files from one Azure Data Lake Storage Gen2 container to another the moment they are uploaded. No manual runs, no schedules. A **Storage Event Trigger** starts the pipeline whenever a new blob lands in the source container.
 
 ![Pipeline design](Pipeline%20Design.png)
 
@@ -40,7 +40,7 @@ Blob uploaded to triggersource
 | Service | Purpose |
 |---|---|
 | Azure Data Factory | Orchestration, trigger, and pipeline |
-| Azure Blob Storage | Source and destination containers |
+| Azure Data Lake Storage Gen2 | Source and destination containers |
 
 ## Pipeline details
 
